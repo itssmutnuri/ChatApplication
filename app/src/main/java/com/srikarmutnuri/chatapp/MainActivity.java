@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity
 
     private static final String TAG = "MainActivity";
     public static final String MESSAGES_CHILD = "messages";
-    public static final int DEFAULT_MSG_LENGTH_LIMIT = 10;
+    public static final int DEFAULT_MSG_LENGTH_LIMIT = 1000;
     public static final String ANONYMOUS = "anonymous";
     private String mUsername;
     private String mPhotoUrl;
@@ -127,9 +127,11 @@ public class MainActivity extends AppCompatActivity
         // Set default username is anonymous.
         mUsername = ANONYMOUS;
 
+
         // Initialize Firebase Auth
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
+
         if (mFirebaseUser == null) {
             // Start sign in/sign up activity
             startActivityForResult(
@@ -138,6 +140,7 @@ public class MainActivity extends AppCompatActivity
                             .build(),
                     SIGN_IN_REQUEST_CODE
             );
+
         } else {
             mUsername = mFirebaseUser.getDisplayName();
 
@@ -150,6 +153,10 @@ public class MainActivity extends AppCompatActivity
             if (mFirebaseUser.getPhotoUrl() != null) {
                 mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
             }
+        }
+
+        if(mUsername.isEmpty()){
+            mUsername = mFirebaseUser.getEmail();
         }
 
         // Initialize ProgressBar and RecyclerView.
