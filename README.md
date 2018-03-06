@@ -8,6 +8,7 @@ This is a somewhat modified version of [Firebase Android Codelab](https://codela
 I've changed the signin method to e-mail based and added a timestamp to the messages, and removed a feature which enables image sharing. 
 
 TODO:
+  * (Current) Optimize code.
   * (Current) Enable one-to-one messaging.
   * (Later) Add an encryption layer
 
