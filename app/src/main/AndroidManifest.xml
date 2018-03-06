@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.google.firebase.codelab.friendlychat">
+    package="com.srikarmutnuri.chatapp">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.google.firebase.codelab.friendlychat.MainActivity">
+        <activity android:name="com.srikarmutnuri.chatapp.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -26,7 +26,7 @@
         </activity>
 
         <service
-            android:name=".MyFirebaseMessagingService"
+            android:name="com.srikarmutnuri.chatapp.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -34,7 +34,7 @@
         </service>
 
         <service
-            android:name=".MyFirebaseInstanceIdService"
+            android:name="com.srikarmutnuri.chatapp.MyFirebaseInstanceIdService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
