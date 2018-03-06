@@ -5,7 +5,7 @@ A simple Android chat application using Firebase. I've made this to explore Fire
 
 This is a somewhat modified version of [Firebase Android Codelab](https://codelabs.developers.google.com/codelabs/firebase-android/index.html?index=..%2F..%2Findex#0) from Google Codelabs. 
 
-![Not Lonely](screenshot.png)
+![No, I am not lonely](screenshot.png)
 
 All the registered users would be participating in a group chat, with all messages visible to everyone.  
 
